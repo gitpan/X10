@@ -1,0 +1,8 @@
+
+modify client/server code to be a little more versatile with what can be
+	sent back & forth
+
+allow macros to deal with EventList too
+
+add fuzz amount in scheduled events
+
