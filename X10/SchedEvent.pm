@@ -82,7 +82,7 @@ sub reschedule
 
             my $time = $self->time($datestr);
 
-            $new = parsedate(sprintf("%s %s", $datestr, $time));
+            $new = parsedate(sprintf("%s %s", $time, $datestr), WHOLE => 1);
             @newarray = localtime($new);
          }
 

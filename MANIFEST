@@ -1,5 +1,7 @@
+Changes
 MANIFEST
 Makefile.PL
+README
 TODO
 X10.pm
 X10/ActiveHome.pm
@@ -19,6 +21,6 @@ devices
 macros.config
 ports
 scheduler.config
+test.pl
 x10client
 x10server
-test.pl

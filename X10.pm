@@ -15,7 +15,7 @@ use X10::Server;
 
 use vars qw($VERSION);
 
-$VERSION = 0.01;
+$VERSION = 0.03;
 
 sub new
 {

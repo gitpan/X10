@@ -68,7 +68,8 @@ sub new
 	|| die "Couldn't connect to FireCracker port ", $self->{port},
 		": ", $!, "\n";
 
-   die "Need IOCTL constants for DTR/RTS manipulation -- see docs for Device::SerialPort" unless $self->{serial_port}->can_ioctl;
+   die "Need IOCTL constants for DTR/RTS manipulation -- see docs for Device::SerialPort"
+	unless $self->{serial_port}->can_ioctl;
 
    $self->{serial_port}->dtr_active(0);
    $self->{serial_port}->rts_active(0);
@@ -194,13 +195,13 @@ sub send_bit
    if ($boolean)
    {
       # send a 'one' bit
-      $self->{serial_port}->pulse_dtr_off(2);
+      $self->{serial_port}->pulse_dtr_off(2);	# milliseconds
       &usleep(1400);
    }
    else
    {
       # send a 'zero' bit
-      $self->{serial_port}->pulse_rts_off(2);
+      $self->{serial_port}->pulse_rts_off(2);	# milliseconds
       &usleep(1400);
    }
 
